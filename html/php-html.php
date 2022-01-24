@@ -13,7 +13,11 @@
      ?>
      <ul>
        <?php
-          // TODO Display the students here, each student inside a new <li> element
+       echo "<ul>";
+          foreach ($students as $student) {
+              echo "<li>".$student."</li>";
+          }
+          echo "</ul>"
        ?>
      </ul>
      <hr>
@@ -23,29 +27,56 @@
        <!-- Instructions : Créer la liste de jour (en chiffres), de mois (en chiffres) et d'année en PHP. -->
        <label for="day">Day</label>
        <select  name="day" id="day"><?php
+           for ($day = 0; $day > 31; $day++) {
+               echo "<option>".$day."</option>";
+           }
            // TODO list of day ?>
        </select>
        <label for="month">Month</label>
        <select  name="month" id="month"><?php
+           for ($month = 0; $month > 12; $month++) {
+               echo "<option>".$month."</option>";
+           }
            // TODO list of month ?>
        </select>
        <label for="year">Year</label>
        <select  name="year" id="year"><?php
+           for ($year = 1850; $year > 2022; $year++) {
+               echo "<option>".$year."</option>";
+           }
            // TODO list of year ?>
        </select>
      </form>
      <hr>
      <!-- TODO Instruction : Afficher ce bloc que si dans l'URL il y'a une variable sexe et que ça valeur vaut "fille" -->
+    <?php
+    if (isset($_GET['sexe']) || $_GET['sexe'] === "fille"){
+    ?>
      <p>
        Je suis une fille
      </p>
+    <?php
+    }
+    ?>
      <!-- TODO Instruction : Afficher ce bloc que si dans l'URL il y'a une variable sexe et que ça valeur vaut "garçon" -->
-     <p>
+    <?php
+    elseif (isset($_GET['sexe']) || $_GET['sexe'] === "garçon") {
+    ?>
+    <p>
        Je suis un garçon
      </p>
+    <?php
+    }
+    ?>
      <!-- TODO Instruction : Afficher ce bloc dans les autres cas -->
+    <?php
+        else {
+    ?>
      <p>
        Je suis indéfini
      </p>
+    <?php
+    }
+    ?>
   </body>
 </html>

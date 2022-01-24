@@ -134,32 +134,44 @@ echo '<br><br>';
 
 
 //----------------------------------------
-//Afficher le nom et prénoms des élèves de ce collège
+//Afficher les noms et prénoms des élèves de ce collège
+
 $college = array(
-  'Sixieme' => array(
-    array('Nom' => 'Payet', 'Prenom' => 'Mickael'),
-    array('Nom' => 'Hoareau', 'Prenom' => 'Christine'),
-    array('Nom' => 'Maillot', 'Prenom' => 'Laure'),
-  ),
-  'Cinquieme' => array(
-    array('Nom' => 'Bourdon', 'Prenom' => 'Didier'),
-    array('Nom' => 'Legitimus', 'Prenom' => 'Pascal'),
-    array('Nom' => 'Campan', 'Prenom' => 'Bernard'),
-    array('Nom' => 'Fois', 'Prenom' => 'Marina'),
-    array('Nom' => 'Floresti', 'Prenom' => 'Florence'),
-  ),
-  'Quatrieme' => array(
-    array('Nom' => 'Willis', 'Prenom' => 'Bruce'),
-    array('Nom' => 'Lawrence', 'Prenom' => 'Laurence'),
-    array('Nom' => 'Johannson', 'Prenom' => 'Scarlett'),
-    array('Nom' => 'Jackson', 'Prenom' => 'Samuel'),
-  ),
+    'Sixieme' => array(
+        array("Nom" => "Payet", "Prenom" => "Mickael"),
+        array("Nom" => "Hoareau", "Prenom" => "Christine"),
+        array("Nom" => "Maillot", "Prenom" => "Laure"),
+    ),
+    'Cinquieme' => array(
+        array("Nom" => "Bourdon", "Prenom" => "Didier"),
+        array("Nom" => "Legitimus", "Prenom" => "Pascal"),
+        array("Nom" => "Campan", "Prenom" => "Bernard"),
+        array("Nom" => "Fois", "Prenom" => "Marina"),
+        array("Nom" => "Foresti", "Prenom" => "Florence"),
+    ),
+    'Quatrieme' => array(
+        array("Nom" => "Willis", "Prenom" => "Bruce"),
+        array("Nom" => "Lawrence", "Prenom" => "Laurence"),
+        array("Nom" => "Johannson", "Prenom" => "Scarlett"),
+        array("Nom" => "Jackson", "Prenom" => "Samuel"),
+    ),
+    'Troisieme' => array(
+        array("Nom" => "Lenon", "Prenom" => "John"),
+        array("Nom" => "Keul", "Prenom" => "Micheal"),
+        array("Nom" => "Jean", "Prenom" => "Jean"),
+        array("Nom" => "Proust", "Prenom" => "Marcel"),
+    ),
 );
 
-echo '10.Les eleves du college : <br>';
-//ajoutez votre code ici
-echo '<br><br>';
+echo "10.Les élèves du collège : <br>";
 
+//Ajoutez votre code ici
+
+foreach ($college as $classe) {
+    foreach ($classe as $student) {
+        echo $student["Nom"]." ".$student["Prenom"]."<br>";
+    }
+}
 //----------------------------------------
 //Afficher le nom et prénoms des élèves de ce collège
 //reprenez le tableau ci-dessus, ajoutez des éléves pour la classe de troisième et réaffichez tout
@@ -168,52 +180,92 @@ echo '11.Les eleves du college (avec les nouveaux arrivants): <br>';
 echo '<br><br>';
 
 //----------------------------------------
+//----------------------------------------
 //Afficher toutes les informations de la vidéothèque
 $videotheque = array(
-  array(
-    'nom' => 'Independance day',
-    'date' => 1996,
-    'realisateur' => 'Roland Emmerich',
-    'acteurs' => array(
-      'Will Smith', 'Bill Pullman', 'Jeff Goldblum', 'Mary McDonnell',
+    array(
+        'nom' => 'Independance day',
+        'date' => 1996,
+        'realisateur' => 'Roland Emmerich',
+        'acteurs' => array(
+            'Will Smith', 'Bill Pullman', 'Jeff Goldblum', 'Mary McDonnell',
+        ),
     ),
-  ),
-  array(
-    'nom' => 'Bienvenue a Gattaca',
-    'date' => 1998,
-    'realisateur' => 'Andrew Niccol',
-    'acteurs' => array(
-      'Ethan Hawke', 'Uma Thurman', 'Jude Law',
+    array(
+        'nom' => 'Bienvenue a Gattaca',
+        'date' => 1998,
+        'realisateur' => 'Andrew Niccol',
+        'acteurs' => array(
+            'Ethan Hawke', 'Uma Thurman', 'Jude Law',
+        ),
     ),
-  ),
-  array(
-    'nom' => 'Forrest Gump',
-    'date' => 1994,
-    'realisateur' => 'Robert Zemeckis',
-    'acteurs' => array(
-      	'Tom Hanks', 'Gary Sinise',
+    array(
+        'nom' => 'Forrest Gump',
+        'date' => 1994,
+        'realisateur' => 'Robert Zemeckis',
+        'acteurs' => array(
+            'Tom Hanks', 'Gary Sinise',
+        ),
     ),
-  ),
-  array(
-    'nom' => '12 hommes en colere',
-    'date' => 1957,
-    'realisateur' => 'Sidney Lumet',
-    'acteurs' => array(
-      	'Henry Fonda','Martin Balsam','John Fiedler','Lee J. Cobb','E.G. Marshall',
+    array(
+        'nom' => '12 hommes en colere',
+        'date' => 1957,
+        'realisateur' => 'Sidney Lumet',
+        'acteurs' => array(
+            'Henry Fonda','Martin Balsam','John Fiedler','Lee J. Cobb','E.G. Marshall',
+        ),
     ),
-  ),
+    array(
+        'nom' => 'Fight Club',
+        'date' => 2019,
+        'realisateur' => "David Fincher",
+        'acteurs' => array("Brad Pitt", "Edward Norton", "Helena Bonham Carter")
+    ),
+    array(
+        'nom' => 'Inception',
+        'date' => 2010,
+        'realisateur' => "Christopher Nolan",
+        'acteurs' => array("Leonardo DiCaprio", "Marion Cotillard", "Elliot Page")
+    ),
+    array(
+        'nom' => 'The dark knight',
+        'date' => 2008,
+        'realisateur' => "Christopher Nolan",
+        'acteurs' => array("Christian Bale", "Heath Ledger", "Aaron Eckhart")
+    )
 );
 
-echo '12.Mes films : <br>';
+echo '12.Mes films : <br><br>';
 //ajoutez votre code ici
-echo '<br><br>';
+foreach ($videotheque as $film) {
+    foreach ($film as $infoLabel => $info) {
+        if ($infoLabel === 'acteurs') {
+            echo "Acteurs : ".implode(", ",$info);
+        }
+        else{
+            echo $infoLabel." : ".$info."<br>";
+        }
+    }
+    echo "<br><br>";
+}
 
 //----------------------------------------
 //Afficher toutes les informations de la vidéothèque
 //reprenez le tableau ci-dessus, ajoutez-y 3 de vos films préférés avec les mêmes
-//d'informations (nom, date, realisateur, acteurs) et en plus de ces informations
+//informations (nom, date, realisateur, acteurs) et en plus de ces informations
 //rajoutez un synopsis
 
-echo '13.Mes films : <br>';
+echo '13.Mes films : <br><br>';
 //ajoutez votre code ici
-echo '<br><br>';
+
+for ($i = 4 ; $i < count($videotheque) ; $i++) {
+    foreach ($videotheque[$i] as $infoLabel => $info) {
+        if ($infoLabel === 'acteurs') {
+            echo "Acteurs : ".implode(", ",$info);
+        }
+        else{
+            echo $infoLabel." : ".$info."<br>";
+        }
+    }
+    echo "<br><br>";
+}
